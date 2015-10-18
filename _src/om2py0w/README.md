@@ -5,8 +5,8 @@
 - py 调用
 	- 1.将相应的.py文件下载到你的home directory,一般是类似于'/User/Zoe'的地址
 		- Mac OS 
-			- 如果，你使用的是python3，请下载(d.py)[http://zoejane.net/python/d.py]
-			- 如果你使用的时python2，请下载(dd.py)[http://zoejane.net/python/dd.py]
+			- 如果，你使用的是python3，请下载[d.py](http://zoejane.net/python/d.py)
+			- 如果你使用的时python2，请下载[dd.py](http://zoejane.net/python/dd.py)
 		- 其他系统正在开发中
 	- 2.更改.py文件的权限，让它可以更方便的被调用，以d.py为例
 		- 在终端输入 ```chmod +x d.py```
