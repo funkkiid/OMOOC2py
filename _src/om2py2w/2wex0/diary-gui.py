@@ -6,12 +6,9 @@ from Tkinter import *
 TITLE_FONT = ("Helvetica", 18, "bold")
 READING_FONT=('sans-serif', 16)
 
-
 class SampleApp(tk.Tk):
-
     def __init__(self, *args, **kwargs):
         tk.Tk.__init__(self, *args, **kwargs)
-
         # the container is where we'll stack a bunch of frames
         # on top of each other, then the one we want visible
         # will be raised above the others
@@ -36,9 +33,7 @@ class SampleApp(tk.Tk):
         frame = self.frames[c]
         frame.tkraise()
 
-
 class StartPage(tk.Frame):
-
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         label = tk.Label(self, text="Diary", font=TITLE_FONT)
@@ -52,8 +47,6 @@ class StartPage(tk.Frame):
         self.photo1=tk.PhotoImage(file="images/write_200.gif")
         canvas1=tk.Canvas(self, width=self.photo1.width(), height=self.photo1.height())
         canvas1.create_image(100,70,image=self.photo1)
-
-
         self.photo2=tk.PhotoImage(file="images/read_200.gif")
         canvas2=tk.Canvas(self, width=self.photo2.width(), height=self.photo1.height())
         canvas2.create_image(100,80,image=self.photo2)
@@ -68,7 +61,6 @@ class StartPage(tk.Frame):
         # 让界面宽一点，同时给底部添加一个pady，因为还不知道具体用法，先用weight和height来占位
 
 class PageOne(tk.Frame):
-
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         label = tk.Label(self, text="写日记", font=TITLE_FONT)
@@ -84,19 +76,12 @@ class PageOne(tk.Frame):
 
     def save(self):
         diaryFile = open('diary.txt','a')
-
         diary=self.entry.get().encode('utf-8')
-        diaryFile.write('\n' + time.strftime('%Y/%m/%d')+ ' ' +diary)
-        
+        diaryFile.write('\n' + time.strftime('%Y/%m/%d')+ ' ' +diary)        
         self.entry.delete(0,tk.END)
         diaryFile.close()
 
-
-
-
-
 class PageTwo(tk.Frame):
-
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         label = tk.Label(self, text="读日记", font=TITLE_FONT)
@@ -120,17 +105,10 @@ class PageTwo(tk.Frame):
         diaryFile.close()
 
         diaryFile = open('diary.txt')
-
         diary = diaryFile.read()
-        text.insert(tk.END, diary)
-        
+        text.insert(tk.END, diary)       
         diaryFile.close()
         
-
-        
-
-
 if __name__ == "__main__":
     app = SampleApp()
     app.mainloop()
-
