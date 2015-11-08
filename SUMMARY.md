@@ -31,7 +31,7 @@
    * [Week4:Surprise and Change](1sTry/week4.md)
        * [Suprise与不插电试验](1sTry/surprise.md)
        * [当时间和精力有限，当你遇到一个坑 - Week2课程笔记](1sTry/face-problem.md)
-       * [小小日记-桌面版](1sTry/diary-GUI.md)
+       * [小小日记-桌面版](1sTry/diary-GUI.md)
    * [Week5:节奏](1sTry/week5.md)
        * [小小日记-Net101](1sTry/diary-net.md)
        * [节奏与不断靠近-Week3课程笔记](1sTry/video3.md)
