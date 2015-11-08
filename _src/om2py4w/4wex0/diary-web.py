@@ -9,7 +9,7 @@ diary=Bottle()
 @diary.route('/')
 @diary.route('/diary')
 def greeting():
-    return template('greeting.tpl')
+    return template('template/greeting.tpl')
 
 @diary.route('/reading')
 def reading():
@@ -38,6 +38,6 @@ def writing():
 <a href='/'>Back Home<a>
 '''
     else:
-        return template('new_diary.tpl')
+        return template('template/new_diary.tpl')
 
 run(diary,host='localhost', port=1234, debug=True)
