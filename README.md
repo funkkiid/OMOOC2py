@@ -1,4 +1,4 @@
-# Zoe的Python星际之旅 -- test
+# Zoe的Python星际之旅
 
 
 星际之旅，即将启航。  
