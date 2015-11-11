@@ -38,7 +38,7 @@
    * [Week6:Web世界](1sTry/week6.md)
        * [小小日记-Web101](1sTry/web101.md)
        * [给你更大的世界 - Week4课程笔记](1sTry/video4.md)
-       * 互联网的世界，让我们启程吧！- 搭建你的第一个python小小网页
+       * [互联网的世界，让我们启程吧！- 搭建你的第一个python小小网页](1sTry/first-internet-web.md)
 * [迭代作品](2nDev/README.md)
 * [人生首秀](3rDemo/README.md)
 * [代码 (_src)](_src/README.md)
