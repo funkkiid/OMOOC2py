@@ -28,3 +28,21 @@
 因为我确实看不懂一大堆的Deployment文档啊。  
 
 事实也证明，PythonAnywhere上搭建bottle网站确实很方便，什么都帮你设置好了。我要做的就是写一个Python文件，然后就等网站自动设置就OK。
+
+## 在PythonAnywhere上建立自己的网站
+
+1. 注册了免费账户，登陆之后，在右上角的Dashboard里，可以打开我们常用的几个面板。
+    - Consoles
+    - Files
+    - Web
+    - Schedule
+    - Databases
+    
+2. 打开Web面板，选择add a new web app。  
+填好后，会根据你选择的框架，如bottle或者flask，  自动给你配置好网页。  
+现在你打开类似于username.pythonanywhere.com的网页，可以看到一个hello的网站已经生成好了。
+
+3. 打开File面板，选择mysite文件夹，在这里可以看到具体的python代码。已经有了示范文件。  
+只要将bottle_app.py改成你想写的代码就可以了。
+
+4. 代码更新后，打开Web面板，选择那个大大的绿色的‘ Reload yourname.pythonanywhere.com’，你的新代码就生效啦。
