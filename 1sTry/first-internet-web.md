@@ -21,5 +21,10 @@
 推测这个用Google App Engine 是可以部署出来的。
 
 获得一个粗略印象后，还是先用google搜索网站获取灵感。
-搜索关键词‘bottle python web deploy’。
-有提到[Red Hat Openshift](https://www.openshift.com/) 和
+搜索关键词‘bottle python web deploy’。  
+有提到[Red Hat Openshift](https://www.openshift.com/) 和[Simple Bottle Hosting: PythonAnywhere](https://www.pythonanywhere.com/details/bottle_hosting)。
+
+浏览了一下网站，在(PythonAnywhere)[https://www.pythonanywhere.com/details/bottle_hosting]上提到‘From sign-up to a live Bottle app in 2 minutes...’，顿时觉得就这个了。   
+因为我确实看不懂一大堆的Deployment文档啊。  
+
+事实也证明，PythonAnywhere上搭建bottle网站确实很方便，什么都帮你设置好了。我要做的就是写一个Python文件，然后就等网站自动设置就OK。
