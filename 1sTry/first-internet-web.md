@@ -11,4 +11,15 @@
 开始是上传到自己的网站空间，后来想，不对啊，虽然我的python程序放上去了，又没人给我运行。  
 不像html放上去，就直接显示了。
 
-应该这个还会涉及到后台的部署，当然，这个我也不太懂，看了[官方的文档的Deployment部分](http://bottlepy.org/docs/dev/deployment.html)，
+然后联想到以前参加Rails Girls的活动的时候，用ruby的代码写的很简单的程序，也是放到heroku上就变成网页了。
+
+猜想这个应该涉及到支持一个可以在后台可以运行python的平台，或者说后台经过某种部署后，python文件是可以以某种方式运行出来的。  
+
+当然，这个我也不太懂，看了[官方的文档的Deployment部分](http://bottlepy.org/docs/dev/deployment.html)。  
+了解了一下bottle的Deployment。  
+不过还是不是很懂，提到的一堆方式我都不熟悉，唯一一个稍微眼熟一点的，是Google App Engine。  
+推测这个用Google App Engine 是可以部署出来的。
+
+获得一个粗略印象后，还是先用google搜索网站获取灵感。
+搜索关键词‘bottle python web deploy’。
+有提到[Red Hat Openshift](https://www.openshift.com/) 和
