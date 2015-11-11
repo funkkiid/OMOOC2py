@@ -27,16 +27,17 @@ def diary(user_name='小小游侠'):
 
 <h1>小小游侠的聊天室</h1>
 <p>欢迎小小游侠来到聊天室小憩一会。
+<br />
 <br />如果想用自己的名字加入交谈，
 <br />可以用 “zoejane.pythonanywhere.com/YOURNAME”进行登录，
 <br />名字可以是字母和数字和下划线的组合。
 <br />
-<br />想搭建一个相似的网页，可以看这里的教程。
-<br />这个网页的具体的代码也可以在这里看到。
+<br />想搭建一个相似的网页，可以看这里的<a href='https://zoejane.gitbooks.io/omooc2py/content/1sTry/first-internet-web.html'>教程</a>。
+<br />这个网页的具体的<a href='https://github.com/zoejane/python-anywhere/blob/master/diary-web.py'>代码</a>也可以在这里看到。
 <br />
 <br />我是<a href='mailto:dadac123@gmail.com'>Zoe Jane</a>，欢迎一起分享你的心得和感悟。
 <br />我的<a href='mailto:dadac123@gmail.com'>Email</a>
-<br />我的<a href='http://zoejane.github.com'>GitHub</a>
+<br />我的<a href='https://github.com/zoejane'>GitHub</a>
 <br />我的<a href='http://zoejane.github.com'>GitBook</a>
 <br /></p>
 
