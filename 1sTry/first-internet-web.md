@@ -46,3 +46,11 @@
 只要将bottle_app.py改成你想写的代码就可以了。
 
 4. 代码更新后，打开Web面板，选择那个大大的绿色的‘ Reload yourname.pythonanywhere.com’，你的新代码就生效啦。
+
+## 我的网站和代码参考
+
+网站 
+http://zoejane.pythonanywhere.com  
+
+代码 https://github.com/zoejane/python-anywhere/blob/master/diary-web.py
+
