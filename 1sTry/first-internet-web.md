@@ -54,3 +54,7 @@ http://zoejane.pythonanywhere.com
 
 代码 https://github.com/zoejane/python-anywhere/blob/master/diary-web.py
 
+## 感想
+- 放在互联网上，感觉比自己玩帅多了。发布出来的感觉真棒！
+- 代码写得比较乱，主要还先把想要的效果搞定出来，写代码的好习惯后期还是要练习。
+- 自己玩不如一起来分享。赶快加入互联网的世界吧 ^_^
