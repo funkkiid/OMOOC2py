@@ -61,3 +61,50 @@ def checkSignature():
     else:
         return "error"
 ```
+
+### 测试Echo功能
+受到[Alan同学的笔记](https://wp-lai.gitbooks.io/learn-python/content/1sTry/wechat.html)的启发，测试了他写的Echo功能的代码，  
+也就是用户发一句话，我就可以回复同样一句话。  
+结合阅读“开发者文档的[接收普通消息](http://mp.weixin.qq.com/wiki/17/fc9a27730e07b9126144d9c96eaf51f9.html)”部分，对微信的文本格式有了一个大概的了解。
+
+对于字典这一部分，还有些不了解，需要补课。  
+考虑这几天把Learn python the hard way的相关部分补完。
+
+不过既然都可以echo了，那我也就可以测试存储日记啦。
+
+### 测试存储日记
+
+把之前写日记的相关代码添加进来。
+
+将Alan同学代码的这一部分，
+
+    # 更新时间
+    import time
+    mydict['CreateTime'] = int(time.time())
+
+    # 现在不对内容做任何操作，只是原样返回
+
+    
+改写成现在我想用的新功能
+
+
+    # 添加日记
+    today=datetime.now()
+    newDiary=mydict['Content']
+    user_name=mydict['FromUserName']
+
+    with open('diary.txt', 'r+') as f:
+        content = f.read()
+        f.seek(0, 0)
+        newDiaryLine=today.strftime("%Y/%m/%d/ %T")+ '  ['+user_name+'] '+newDiary
+        f.write(newDiaryLine.rstrip('\r\n') + '\n' + content)
+
+    # 更新时间
+    import time
+    mydict['CreateTime'] = int(time.time())
+    # 更新回复内容
+    mydict['Content'] = mydict['Content']+'已保存'
+
+就实现了两个小小功能：
+1. 将用户发送的内容自动添加到diary.txt中
+2. 回复用户 ‘XXX已保存’
