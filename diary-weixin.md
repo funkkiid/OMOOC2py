@@ -29,8 +29,9 @@
 比如我的就是http://zoejane.pythonanywhere.com/wechat
 
 验证成功，搞定！
+启用服务器配置
 
-代码
+##### 代码
 
 ```
 @route("/wechat")
