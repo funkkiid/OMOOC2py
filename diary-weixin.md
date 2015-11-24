@@ -12,3 +12,51 @@
 在“开发者工具”里有提供[开发者文档](http://mp.weixin.qq.com/wiki/home/index.html)
 
 
+### 服务器配置
+阅读开发者文档的[接入指南](http://mp.weixin.qq.com/wiki/16/1e87586a83e0e121cc3e808014375b74.html)部分,  
+了解到是要在自己的网站上添加一段代码，  
+使得它能够获取微信服务器所发送的GET参数请求中携带的四个参数，   
+完成相关的校验流程，  
+返回echostr参数的内容。
+
+具体这段代码要怎么写呢？  
+在[Alan同学的笔记](https://wp-lai.gitbooks.io/learn-python/content/1sTry/wechat.html)中找到了[具体的实现方式](http://www.cnblogs.com/weishun/p/weixin-publish-developing.html)。
+
+对照接入指南中的流程，对代码进行了一下梳理与注释。
+
+将这段代码加入到自己的网站中，  
+并将微信的服务器配置URL设为“http://自己的网址/wechat”，  
+比如我的就是http://zoejane.pythonanywhere.com/wechat
+
+验证成功，搞定！
+
+代码
+
+```
+@route("/wechat")
+def checkSignature():
+
+    # 获取微信服务器所发送的GET参数请求中携带的四个参数
+    signature = request.GET.get('signature', None)
+    timestamp = request.GET.get('timestamp', None)
+    nonce = request.GET.get('nonce', None)
+    echostr = request.GET.get('echostr', None)
+
+    token = "mytoken" # 你在微信公众平台上设置的TOKEN
+
+    # 将token、timestamp、nonce三个参数进行字典序排序
+    tmpList = [token, timestamp, nonce]
+    tmpList.sort()
+
+    # 将三个参数字符串拼接成一个字符串进行sha1加密
+    import hashlib
+    tmpstr = "%s%s%s" % tuple(tmpList)
+    hashstr = hashlib.sha1(tmpstr).hexdigest()
+
+    #开发者获得加密后的字符串可与signature对比，标识该请求来源于微信
+    # 若确认此次GET请求来自微信服务器，请原样返回echostr参数内容，则接入生效
+    if hashstr == signature:
+        return echostr
+    else:
+        return "error"
+```
