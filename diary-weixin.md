@@ -10,3 +10,5 @@
 点击左边目录的“开发者中心”  
 接受协议即可
 在“开发者工具”里有提供[开发者文档](http://mp.weixin.qq.com/wiki/home/index.html)
+
+
