@@ -42,6 +42,7 @@
    * [Week7:那不存在的门](1sTry/week7.md)
        * [那不存在的门](1sTry/video5.md)
    * Week8:休养生息
+   * Week9:Go on
 * [迭代作品](2nDev/README.md)
 * [人生首秀](3rDemo/README.md)
 * [代码 (_src)](_src/README.md)
