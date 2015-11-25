@@ -174,3 +174,29 @@ def checkSignature():
         # 更新回复内容
         mydict['Content'] = mydict['Content'].encode('UTF-8')+'已保存'
 
+### 添加都用户支持
+根据FromUserName来识别，给每个用户建立专属的FromUserName.txt文件
+
+    user_name=mydict['FromUserName']
+    user_diary=str(user_name)+'.txt'
+
+    # 添加阅读
+    elif mydict['Content'].lower() =='read':
+        diaryFile = open(user_diary)
+        diaryContent = diaryFile.read()
+        diaryFile.close()
+        mydict['Content'] = diaryContent
+
+    else:
+        # 添加日记
+        today=datetime.now()
+        newDiary=mydict['Content'].encode('UTF-8')
+
+        diaryFile = open(user_diary,'a')
+        diaryFile.close()
+
+        with open(user_diary, 'r+') as f:
+            content = f.read()
+            f.seek(0, 0)
+            newDiaryLine=today.strftime("%Y/%m/%d/ %T")+ ' '+newDiary
+            f.write(newDiaryLine.rstrip('\r\n') + '\n' + content)
