@@ -42,7 +42,7 @@
    * [Week7:那不存在的门](1sTry/week7.md)
        * [那不存在的门](1sTry/video5.md)
    * [Week8:休养生息](1sTry/week8.md)
-       * Week8:休养生息
+       * [Week8:休养生息](1sTry/have-a-rest.md)
    * [Week9:Go on](1sTry/week9.md)
        * [微信平台-小小日记](1sTry/diary-weixin.md)
        * [为自己建立更大的支持系统](support_system.md)
