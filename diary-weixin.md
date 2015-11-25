@@ -174,7 +174,7 @@ def checkSignature():
         # 更新回复内容
         mydict['Content'] = mydict['Content'].encode('UTF-8')+'已保存'
 
-### 添加都用户支持
+### 添加多用户支持
 根据FromUserName来识别，给每个用户建立专属的FromUserName.txt文件
 
     user_name=mydict['FromUserName']
