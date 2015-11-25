@@ -199,4 +199,12 @@ def checkSignature():
             content = f.read()
             f.seek(0, 0)
             newDiaryLine=today.strftime("%Y/%m/%d/ %T")+ ' '+newDiary
-            f.write(newDiaryLine.rstrip('\r\n') + '\n' + content)
+            f.write(newDiaryLine.rstrip('\r\n') + '\n' + content)'
+            
+            
+            
+### 修正时区
+    from datetime import datetime
+    import pytz
+    
+    today = datetime.now(pytz.timezone('Asia/Shanghai'))
