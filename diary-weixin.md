@@ -74,7 +74,9 @@ def checkSignature():
 ```
 @route("/wechat")
 def checkSignature():
+    # 获取echostr
     echostr = request.GET.get('echostr', None)
+    # 返回echostr
     return echostr
 ```
 测试通过！  
