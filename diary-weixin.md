@@ -135,5 +135,42 @@ def checkSignature():
 
 其实有了mydict['Content']这部分内容，就会发现和第一周命令行的开发差不多了
 
-### 增加帮助
-用户输入'?'或者‘h’,'help',或者‘帮助’，可以看到帮助
+### 增加帮助和阅读功能，增加中文支持
+用户输入'help',可以看到帮助  
+输入'read'，可以阅读历史日记
+
+之前有碰到输入中文就会出现‘暂时无法提供服务的现象’，  
+后来来了解到,在接受消息和发送消息时，消息的encode要改成UTF-8
+
+
+    # 添加帮助
+    if mydict['Content'] =='help':
+        mydict['Content'] = '''
+        输入“help”或者“帮助”可以看到帮助
+        输入“read”或者“阅读”可以阅读历史日记
+        '''
+    
+    # 添加阅读
+    elif mydict['Content'] =='read':
+        diaryFile = open('diary-wechat.txt')
+        diaryContent = diaryFile.read()
+        diaryFile.close()
+        mydict['Content'] = diaryContent
+
+    else:
+        # 添加日记
+        today=datetime.now()
+        newDiary=mydict['Content'].encode('UTF-8')
+
+        with open('diary-wechat.txt', 'r+') as f:
+            content = f.read()
+            f.seek(0, 0)
+            newDiaryLine=today.strftime("%Y/%m/%d/ %T")+ ' '+newDiary
+            f.write(newDiaryLine.rstrip('\r\n') + '\n' + content)
+
+        # 更新时间
+        import time
+        mydict['CreateTime'] = int(time.time())
+        # 更新回复内容
+        mydict['Content'] = mydict['Content'].encode('UTF-8')+'已保存'
+
