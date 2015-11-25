@@ -45,7 +45,7 @@
        * Week8:休养生息
    * Week9:Go on
        * [微信平台-小小日记](diary-weixin.md)
-       * 为自己建立更大的支持系统
+       * [为自己建立更大的支持系统](support_system.md)
 * [迭代作品](2nDev/README.md)
 * [人生首秀](3rDemo/README.md)
 * [代码 (_src)](_src/README.md)
