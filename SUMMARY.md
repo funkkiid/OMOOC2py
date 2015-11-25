@@ -43,8 +43,8 @@
        * [那不存在的门](1sTry/video5.md)
    * [Week8:休养生息](1sTry/week8.md)
        * Week8:休养生息
-   * Week9:Go on
-       * [微信平台-小小日记](/1sTry/diary-weixin.md)
+   * [Week9:Go on](1sTry/week9.md)
+       * [微信平台-小小日记](1sTry/diary-weixin.md)
        * [为自己建立更大的支持系统](support_system.md)
 * [迭代作品](2nDev/README.md)
 * [人生首秀](3rDemo/README.md)
