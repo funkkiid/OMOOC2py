@@ -67,6 +67,21 @@ def checkSignature():
         return "error"
 ```
 
+### Just for fun,绕过复杂的服务器配置
+其实服务器的配置只是检测有没有返回echostr   
+所以，看似复杂的服务器配置根本也可以不用这么麻烦  
+只要这一段就可以了
+```
+@route("/wechat")
+def checkSignature():
+    echostr = request.GET.get('echostr', None)
+    return echostr
+```
+测试通过！  
+
+所以其实写不出上一段中的那一段略微复杂的代码也没有关系，因为这个根本也不是重点...  
+不过我差点就卡在这里了 因为开发者模式一定会很复杂 我开始的时候根本看不懂校验流程说的到底是什么
+
 ### 测试Echo功能
 受到[Alan同学的笔记](https://wp-lai.gitbooks.io/learn-python/content/1sTry/wechat.html)的启发，测试了他写的Echo功能的代码，  
 也就是用户发一句话，我就可以回复同样一句话。  
@@ -115,3 +130,5 @@ def checkSignature():
 就实现了两个小小功能：
 1. 将用户发送的内容自动添加到diary.txt中
 2. 回复用户 ‘XXX已保存’
+
+其实有了mydict['Content']这部分内容，就会发现和第一周命令行的开发差不多了
