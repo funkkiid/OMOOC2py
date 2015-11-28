@@ -47,6 +47,7 @@
        * [微信平台-小小日记](1sTry/diary-weixin.md)
        * [为自己建立更大的支持系统](support_system.md)
 * [迭代作品](2nDev/README.md)
+   * Week10:What am I wanna do?
 * [人生首秀](3rDemo/README.md)
 * [代码 (_src)](_src/README.md)
 * [素材 (draft)](draft/README.md)
