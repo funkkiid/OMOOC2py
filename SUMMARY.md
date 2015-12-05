@@ -50,6 +50,7 @@
    * [Week10:What am I wanna do?](2nDev/week10.md)
        * [What am I wanna do](2nDev/what_am_i_wanna_do.md)
        * [梦想的秘密花园](2nDev/secret-garden.md)
+           * 让我开心的三件事
 * [人生首秀](3rDemo/README.md)
 * [代码 (_src)](_src/README.md)
 * [素材 (draft)](draft/README.md)
